@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Solicita o nome de usuário
+        Console.WriteLine("Digite o nome de usuário:");
+        string nomeUsuario = Console.ReadLine();
+
+        // Solicita a senha
+        Console.WriteLine("Digite a senha:");
+        string senha = Console.ReadLine();
+
+        // Verifica as credenciais
+        if (nomeUsuario.ToLower() == "admin" && senha == "123senha")
+        {
+            Console.WriteLine("Login realizado com sucesso!");
+        }
+        else
+        {
+            Console.WriteLine("Credenciais inválidas...");
+        }
+    }
+}
