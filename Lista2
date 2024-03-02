@@ -1,3 +1,4 @@
+//ExercI
 using System;
 
 class Program
@@ -20,6 +21,84 @@ class Program
         else
         {
             Console.WriteLine("Credenciais inválidas...");
+        }
+    }
+}
+
+//ExercII
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Solicita e lê as notas do aluno
+        Console.WriteLine("Digite a primeira nota:");
+        double nota1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Digite a segunda nota:");
+        double nota2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Digite a terceira nota:");
+        double nota3 = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Digite a quarta nota:");
+        double nota4 = Convert.ToDouble(Console.ReadLine());
+
+        // Calcula a média aritmética das notas
+        double media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+        // Verifica se o aluno foi aprovado, reprovado ou está em recuperação
+        if (media >= 7.0)
+        {
+            Console.WriteLine("O aluno foi aprovado com média " + media.ToString("0.00"));
+        }
+        else if (media < 5.0)
+        {
+            Console.WriteLine("O aluno foi reprovado com média " + media.ToString("0.00"));
+        }
+        else
+        {
+            Console.WriteLine("O aluno está em recuperação com média " + media.ToString("0.00"));
+        }
+    }
+}
+
+//ExercIII
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Solicita o nome da criança
+        Console.WriteLine("Digite o nome da criança (Filomena ou Joselito):");
+        string nomeCrianca = Console.ReadLine();
+
+        // Verifica o nome da criança e exibe a rotina correspondente
+        switch (nomeCrianca.ToLower())
+        {
+            case "filomena":
+                Console.WriteLine("Rotina de Filomena:");
+                Console.WriteLine("- 8:00h - Café da manhã");
+                Console.WriteLine("- 9:00h - Aula de música");
+                Console.WriteLine("- 12:00h - Almoço");
+                Console.WriteLine("- 15:00h - Lanche da tarde");
+                Console.WriteLine("- 18:00h - Jantar");
+                Console.WriteLine("- 20:00h - Dormir");
+                break;
+            case "joselito":
+                Console.WriteLine("Rotina de Joselito:");
+                Console.WriteLine("- 7:30h - Café da manhã");
+                Console.WriteLine("- 10:00h - Brincar no parque");
+                Console.WriteLine("- 12:30h - Almoço");
+                Console.WriteLine("- 16:00h - Lanche da tarde");
+                Console.WriteLine("- 19:00h - Jantar");
+                Console.WriteLine("- 21:00h - Dormir");
+                break;
+            default:
+                Console.WriteLine("Nome de criança inválido.");
+                break;
         }
     }
 }
